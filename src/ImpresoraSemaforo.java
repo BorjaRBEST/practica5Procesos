@@ -1,29 +1,30 @@
 import java.util.concurrent.Semaphore;
 
 public class ImpresoraSemaforo {
-    private Semaphore semaforoPim = new Semaphore(1);
-    private Semaphore semaforoPam = new Semaphore(0);
+    private Semaphore semaforoPim = new Semaphore(1); // Semáforo para controlar la impresión de "PIM"
+    private Semaphore semaforoPam = new Semaphore(0); // Semáforo para controlar la impresión de "PAM"
 
+    // Método para imprimir "PIM"
     public void imprimirPim() {
         try {
-            semaforoPim.acquire();
+            semaforoPim.acquire(); // Adquiere el permiso del semáforo para imprimir "PIM"
             System.out.println("PIM");
-            Thread.sleep(1000);
-            semaforoPam.release();
+            Thread.sleep(1000); // Simula el proceso de impresión
+            semaforoPam.release(); // Libera el permiso del semáforo para indicar que ahora se puede imprimir "PAM"
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
+    // Método para imprimir "PAM"
     public void imprimirPam() {
         try {
-            semaforoPam.acquire();
+            semaforoPam.acquire(); // Adquiere el permiso del semáforo para imprimir "PAM"
             System.out.println("PAM");
-            Thread.sleep(1000);
-            semaforoPim.release();
+            Thread.sleep(1000); // Simula el proceso de impresión
+            semaforoPim.release(); // Libera el permiso del semáforo para indicar que ahora se puede imprimir "PIM"
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 }
-
