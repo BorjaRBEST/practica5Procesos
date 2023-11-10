@@ -8,7 +8,7 @@ public class ImpresoraMonitor {
             while (!turnoPim) {
                 wait();
             }
-            System.out.println("PIM");
+            System.out.println("MONITOR PIM");
             Thread.sleep(1000); // Simula el proceso de impresión
             turnoPim = false; // Cambia el turno para indicar que ahora es el turno de imprimir "PAM"
             notify(); // Notifica a los hilos en espera que el turno ha cambiado
@@ -24,7 +24,7 @@ public class ImpresoraMonitor {
             while (turnoPim) {
                 wait();
             }
-            System.out.println("PAM");
+            System.out.println("MONITOR PAM");
             Thread.sleep(1000); // Simula el proceso de impresión
             turnoPim = true; // Cambia el turno para indicar que ahora es el turno de imprimir "PIM"
             notify(); // Notifica a los hilos en espera que el turno ha cambiado
