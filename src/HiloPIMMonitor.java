@@ -1,5 +1,5 @@
 public class HiloPIMMonitor extends Thread {
-    private ImpresoraMonitor impresoraMonitor;
+    final private ImpresoraMonitor impresoraMonitor;
 
     // Constructor que recibe una instancia de ImpresoraMonitor como parámetro
     public HiloPIMMonitor(ImpresoraMonitor impresoraMonitor) {

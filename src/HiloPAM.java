@@ -1,5 +1,5 @@
 public class HiloPAM extends Thread {
-    private Impresora impresora;
+   final private Impresora impresora;
 
     // Constructor que recibe una instancia de Impresora como parámetro
     public HiloPAM(Impresora impresora) {

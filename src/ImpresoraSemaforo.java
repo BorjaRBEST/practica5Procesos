@@ -1,8 +1,8 @@
 import java.util.concurrent.Semaphore;
 
 public class ImpresoraSemaforo {
-    private Semaphore semaforoPim = new Semaphore(1); // Semáforo para controlar la impresión de "PIM"
-    private Semaphore semaforoPam = new Semaphore(0); // Semáforo para controlar la impresión de "PAM"
+    final private Semaphore semaforoPim = new Semaphore(1); // Semáforo para controlar la impresión de "PIM"
+    final private Semaphore semaforoPam = new Semaphore(0); // Semáforo para controlar la impresión de "PAM"
 
     // Método para imprimir "PIM"
     public void imprimirPim() {

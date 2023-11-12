@@ -1,6 +1,6 @@
 
 public class HiloPAMSemaforo extends Thread {
-    private ImpresoraSemaforo impresoraSemaforo;
+    final private ImpresoraSemaforo impresoraSemaforo;
 
     // Constructor que recibe una instancia de ImpresoraSemaforo como parámetro
     public HiloPAMSemaforo(ImpresoraSemaforo impresoraSemaforo) {
